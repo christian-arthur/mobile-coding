@@ -27,8 +27,7 @@ def get_file_content(path):
     return None
 
 # Example usage
-file_name = "existing_file.py"  # Replace with the name of your file
-
+file_name = "example_file_name.py"  # Replace with the name of your file
 content = get_file_content(file_name)
 
 if content is not None:

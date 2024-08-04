@@ -27,7 +27,7 @@ def create_file(path, content, commit_message):
     return response.status_code == 201
 
 # Example usage
-file_name = "new_file.py"  # Replace with the name of your new file
+file_name = "example_file_name.py"  # Replace with the name of your new file
 
 # Read the content from your local file
 with open(file_name, 'r') as file:

@@ -37,7 +37,7 @@ def update_file_content(path, new_content, sha, commit_message):
     return response.status_code == 200
 
 # Example usage
-file_name = "existing_file.py"  # Replace with the name of your file
+file_name = "example_file_name.py"  # Replace with the name of your file
 commit_message = "Update file from script"
 
 # Read the new content from your local file
