@@ -1,15 +1,19 @@
 # This script retrieves the content of an existing file in a GitHub repository using the GitHub API.
-
 import requests
 import base64
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # GitHub API base URL
 api_url = "https://api.github.com"
 
-# Your GitHub username, repository name, and personal access token
-username = "christianarthurbphc"
-repo_name = "mobile-coding"
-token = "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"
+# Get credentials from environment variables
+username = os.getenv("GITHUB_USERNAME")
+repo_name = os.getenv("GITHUB_REPO")
+token = os.getenv("GITHUB_TOKEN")
 
 # Headers for authentication
 headers = {

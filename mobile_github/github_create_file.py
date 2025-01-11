@@ -1,14 +1,19 @@
 # This script creates a new file in a GitHub repository using the GitHub API.
 import requests
 import base64
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # GitHub API base URL
 api_url = "https://api.github.com"
 
-# Your GitHub username, repository name, and personal access token
-username = "christianarthurbphc"
-repo_name = "mobile-coding"
-token = "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"
+# Get credentials from environment variables
+username = os.getenv("GITHUB_USERNAME")
+repo_name = os.getenv("GITHUB_REPO")
+token = os.getenv("GITHUB_TOKEN")
 
 # Headers for authentication
 headers = {
@@ -33,6 +38,7 @@ file_name = "example_file_name.py"  # Replace with the name of your new file
 with open(file_name, 'r') as file:
     content = file.read()
 
+# Replaces with your choice of commit message
 commit_message = "Create new file from script"
 
 if create_file(file_name, content, commit_message):
